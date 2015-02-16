@@ -8,6 +8,9 @@
 
 #import <UIKit/UIKit.h>
 #import <XCTest/XCTest.h>
+#import "RTRRentButton.h"
+
+#define RTRtimeoutInterval 2.0
 
 @interface RentKitTests : XCTestCase
 
@@ -25,16 +28,31 @@
     [super tearDown];
 }
 
-- (void)testExample {
-    // This is an example of a functional test case.
-    XCTAssert(YES, @"Pass");
+- (void)testRentButton {
+
+    XCTestExpectation *expectation = [self expectationWithDescription:@"Expects complete block execution."];
+    
+    RTRRentButton *rentButton = [RTRRentButton rentButtonWithSKU:@"123456" Center:CGPointMake(100, 200) completionBlock:^(BOOL completed) {
+        
+        if (completed) {
+            [expectation fulfill];
+        }else{
+        
+            XCTAssert(completed,@"Rent should be completed");
+        }
+    }];
+    
+    [rentButton sendActionsForControlEvents:UIControlEventTouchUpInside];
+    [rentButton rentItem];
+    
+    [self waitForExpectationsWithTimeout:RTRtimeoutInterval handler:^(NSError *error) {
+        if(error){
+            XCTFail(@"Expectation Error: %@", [error localizedDescription]);
+        }
+    }];
+    
+    
 }
 
-- (void)testPerformanceExample {
-    // This is an example of a performance test case.
-    [self measureBlock:^{
-        // Put the code you want to measure the time of here.
-    }];
-}
 
 @end

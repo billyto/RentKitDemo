@@ -10,10 +10,10 @@
 		21CF302E1A915ADE00BC2181 /* RentKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 21CF302D1A915ADE00BC2181 /* RentKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		21CF30341A915ADE00BC2181 /* RentKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 21CF30281A915ADE00BC2181 /* RentKit.framework */; };
 		21CF303B1A915ADE00BC2181 /* RentKitTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 21CF303A1A915ADE00BC2181 /* RentKitTests.m */; };
-		21CF309D1A9229ED00BC2181 /* RTRButtonStyle.h in Headers */ = {isa = PBXBuildFile; fileRef = 21CF30991A9229ED00BC2181 /* RTRButtonStyle.h */; };
+		21CF309D1A9229ED00BC2181 /* RTRButtonStyle.h in Headers */ = {isa = PBXBuildFile; fileRef = 21CF30991A9229ED00BC2181 /* RTRButtonStyle.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		21CF309E1A9229ED00BC2181 /* RTRButtonStyle.m in Sources */ = {isa = PBXBuildFile; fileRef = 21CF309A1A9229ED00BC2181 /* RTRButtonStyle.m */; };
 		21CF309F1A9229ED00BC2181 /* RTRButtonStyle.m in Sources */ = {isa = PBXBuildFile; fileRef = 21CF309A1A9229ED00BC2181 /* RTRButtonStyle.m */; };
-		21CF30A01A9229ED00BC2181 /* RTRRentButton.h in Headers */ = {isa = PBXBuildFile; fileRef = 21CF309B1A9229ED00BC2181 /* RTRRentButton.h */; };
+		21CF30A01A9229ED00BC2181 /* RTRRentButton.h in Headers */ = {isa = PBXBuildFile; fileRef = 21CF309B1A9229ED00BC2181 /* RTRRentButton.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		21CF30A11A9229ED00BC2181 /* RTRRentButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 21CF309C1A9229ED00BC2181 /* RTRRentButton.m */; };
 		21CF30A21A9229ED00BC2181 /* RTRRentButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 21CF309C1A9229ED00BC2181 /* RTRRentButton.m */; };
 /* End PBXBuildFile section */
@@ -148,6 +148,7 @@
 				21CF30231A915ADE00BC2181 /* Sources */,
 				21CF30241A915ADE00BC2181 /* Frameworks */,
 				21CF30251A915ADE00BC2181 /* Headers */,
+				21CF30A61A924BCD00BC2181 /* Run XCodeCoverage */,
 				21CF30261A915ADE00BC2181 /* Resources */,
 			);
 			buildRules = (
@@ -229,6 +230,23 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		21CF30A61A924BCD00BC2181 /* Run XCodeCoverage */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Run XCodeCoverage";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = XcodeCoverage/exportenv.sh;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		21CF30231A915ADE00BC2181 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -283,6 +301,8 @@
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_GENERATE_TEST_COVERAGE_FILES = YES;
+				GCC_INSTRUMENT_PROGRAM_FLOW_ARCS = YES;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
@@ -328,6 +348,8 @@
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_GENERATE_TEST_COVERAGE_FILES = YES;
+				GCC_INSTRUMENT_PROGRAM_FLOW_ARCS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
 				GCC_WARN_UNDECLARED_SELECTOR = YES;
@@ -351,6 +373,8 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_GENERATE_TEST_COVERAGE_FILES = YES;
+				GCC_INSTRUMENT_PROGRAM_FLOW_ARCS = YES;
 				INFOPLIST_FILE = RentKit/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -366,6 +390,8 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_GENERATE_TEST_COVERAGE_FILES = YES;
+				GCC_INSTRUMENT_PROGRAM_FLOW_ARCS = YES;
 				INFOPLIST_FILE = RentKit/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -381,6 +407,7 @@
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
 				);
+				GCC_INSTRUMENT_PROGRAM_FLOW_ARCS = YES;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
 					"$(inherited)",
@@ -398,6 +425,7 @@
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
 				);
+				GCC_INSTRUMENT_PROGRAM_FLOW_ARCS = YES;
 				INFOPLIST_FILE = RentKitTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";

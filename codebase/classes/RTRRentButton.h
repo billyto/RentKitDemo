@@ -14,5 +14,6 @@ typedef void (^completionBlock)(BOOL completed);
 @interface RTRRentButton : UIButton
 
 + (instancetype)rentButtonWithSKU:(NSString *)sku Center:(CGPoint)center completionBlock:(completionBlock)block;
+- (void)rentItem;
 
 @end
