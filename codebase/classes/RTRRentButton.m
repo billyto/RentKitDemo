@@ -18,6 +18,7 @@
 @property (nonatomic) CGPoint *center;
 @property (nonatomic) BOOL pressed;
 @property (nonatomic, copy) NSString *label;
+@property (nonatomic, copy) NSString *sku;
 @property (nonatomic, strong) UIImage *icon;
 @property (nonatomic, copy) void (^completionBlock)(BOOL completed);
 
@@ -27,8 +28,7 @@
 @implementation RTRRentButton
 
 
-+ (instancetype)rentButtonWithCenter:(CGPoint)center completionBlock:(completionBlock)block {
-
++ (instancetype)rentButtonWithSKU:(NSString *)sku Center:(CGPoint)center completionBlock:(completionBlock)block {
     RTRRentButton *button = [RTRRentButton new];
     [button setFrame:CGRectMake(center.x, center.y, 260, 100)];
     [button addTarget:button action:@selector(rentItem) forControlEvents:UIControlEventTouchUpInside];
@@ -37,7 +37,10 @@
     if (block) {
         button.completionBlock = block;
     }
-
+    if (sku){
+        button.sku = sku;
+    
+    }
 
     [button setNeedsDisplay];
     
@@ -69,14 +72,17 @@
 - (void)rentCompleted {
 
     self.pressed = NO;
-    self.label = @"Rented";
+    self.label = self.sku ? @"Rented": @"Error";
     [self setNeedsDisplay];
 
-    NSLog(@"renting from inside");
     if (self.completionBlock) {
-        self.completionBlock(YES);
+        
+        if (self.sku) {
+            self.completionBlock(YES);
+        }else{
+            self.completionBlock(NO);
+        }
     }
-
 }
 
 
