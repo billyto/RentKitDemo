@@ -14,6 +14,7 @@ FOUNDATION_EXPORT double RentKitVersionNumber;
 //! Project version string for RentKit.
 FOUNDATION_EXPORT const unsigned char RentKitVersionString[];
 
-// In this header, you should import all the public headers of your framework using statements like #import <RentKit/PublicHeader.h>
+// In this header, you should import all the public headers of your framework using statements like
+#import <RentKit/RTRRentButton.h>
 
 

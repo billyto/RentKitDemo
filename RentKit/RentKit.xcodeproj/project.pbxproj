@@ -10,6 +10,12 @@
 		21CF302E1A915ADE00BC2181 /* RentKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 21CF302D1A915ADE00BC2181 /* RentKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		21CF30341A915ADE00BC2181 /* RentKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 21CF30281A915ADE00BC2181 /* RentKit.framework */; };
 		21CF303B1A915ADE00BC2181 /* RentKitTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 21CF303A1A915ADE00BC2181 /* RentKitTests.m */; };
+		21CF309D1A9229ED00BC2181 /* RTRButtonStyle.h in Headers */ = {isa = PBXBuildFile; fileRef = 21CF30991A9229ED00BC2181 /* RTRButtonStyle.h */; };
+		21CF309E1A9229ED00BC2181 /* RTRButtonStyle.m in Sources */ = {isa = PBXBuildFile; fileRef = 21CF309A1A9229ED00BC2181 /* RTRButtonStyle.m */; };
+		21CF309F1A9229ED00BC2181 /* RTRButtonStyle.m in Sources */ = {isa = PBXBuildFile; fileRef = 21CF309A1A9229ED00BC2181 /* RTRButtonStyle.m */; };
+		21CF30A01A9229ED00BC2181 /* RTRRentButton.h in Headers */ = {isa = PBXBuildFile; fileRef = 21CF309B1A9229ED00BC2181 /* RTRRentButton.h */; };
+		21CF30A11A9229ED00BC2181 /* RTRRentButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 21CF309C1A9229ED00BC2181 /* RTRRentButton.m */; };
+		21CF30A21A9229ED00BC2181 /* RTRRentButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 21CF309C1A9229ED00BC2181 /* RTRRentButton.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,6 +35,10 @@
 		21CF30331A915ADE00BC2181 /* RentKitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RentKitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		21CF30391A915ADE00BC2181 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		21CF303A1A915ADE00BC2181 /* RentKitTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RentKitTests.m; sourceTree = "<group>"; };
+		21CF30991A9229ED00BC2181 /* RTRButtonStyle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RTRButtonStyle.h; sourceTree = "<group>"; };
+		21CF309A1A9229ED00BC2181 /* RTRButtonStyle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RTRButtonStyle.m; sourceTree = "<group>"; };
+		21CF309B1A9229ED00BC2181 /* RTRRentButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RTRRentButton.h; sourceTree = "<group>"; };
+		21CF309C1A9229ED00BC2181 /* RTRRentButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RTRRentButton.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,6 +81,7 @@
 		21CF302A1A915ADE00BC2181 /* RentKit */ = {
 			isa = PBXGroup;
 			children = (
+				21CF30981A9229ED00BC2181 /* classes */,
 				21CF302D1A915ADE00BC2181 /* RentKit.h */,
 				21CF302B1A915ADE00BC2181 /* Supporting Files */,
 			);
@@ -102,6 +113,18 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		21CF30981A9229ED00BC2181 /* classes */ = {
+			isa = PBXGroup;
+			children = (
+				21CF30991A9229ED00BC2181 /* RTRButtonStyle.h */,
+				21CF309A1A9229ED00BC2181 /* RTRButtonStyle.m */,
+				21CF309B1A9229ED00BC2181 /* RTRRentButton.h */,
+				21CF309C1A9229ED00BC2181 /* RTRRentButton.m */,
+			);
+			name = classes;
+			path = ../../codebase/classes;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -110,6 +133,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				21CF302E1A915ADE00BC2181 /* RentKit.h in Headers */,
+				21CF30A01A9229ED00BC2181 /* RTRRentButton.h in Headers */,
+				21CF309D1A9229ED00BC2181 /* RTRButtonStyle.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -209,6 +234,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				21CF309E1A9229ED00BC2181 /* RTRButtonStyle.m in Sources */,
+				21CF30A11A9229ED00BC2181 /* RTRRentButton.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -216,6 +243,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				21CF309F1A9229ED00BC2181 /* RTRButtonStyle.m in Sources */,
+				21CF30A21A9229ED00BC2181 /* RTRRentButton.m in Sources */,
 				21CF303B1A915ADE00BC2181 /* RentKitTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
